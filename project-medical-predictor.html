@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical No-Show Predictor | Lakshay Bishnoi</title>
+  <meta name="description" content="A machine learning project that predicts whether a patient will show up or miss their medical appointment." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">LB</a>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Project Details Section -->
+  <section class="project-detail-section">
+    <div class="project-detail-container">
+      <a href="projects.html" class="back-button">← Back to Projects</a>
+      
+      <div class="project-detail-header">
+        <div class="project-detail-icon">🏥</div>
+        <h1 class="project-detail-title">Medical No-Show Predictor</h1>
+        <p class="project-detail-subtitle">ML-powered prediction of patient appointment attendance</p>
+      </div>
+
+      <div class="project-detail-content">
+        <div class="detail-section">
+          <h2>Overview</h2>
+          <p>A machine learning project that predicts whether a patient will show up or miss their medical appointment using historical data and demographic information. This tool helps healthcare facilities optimize their schedules, reduce resource waste, and improve operational efficiency.</p>
+        </div>
+
+        <div class="detail-section">
+          <h2>Problem Statement</h2>
+          <p>Medical facilities face significant challenges with patient no-shows, which lead to wasted resources, longer wait times, and reduced revenue. This project builds a predictive model that identifies high-risk patients likely to miss appointments, enabling proactive interventions like reminder calls or appointment rescheduling.</p>
+        </div>
+
+        <div class="detail-section">
+          <h2>Key Features</h2>
+          <ul class="features-list">
+            <li><strong>Dataset:</strong> 110,000+ medical appointment records from Kaggle</li>
+            <li><strong>Binary Classification:</strong> Predicts show/no-show outcomes using Logistic Regression</li>
+            <li><strong>Feature Analysis:</strong> Analyzes demographic, health, and scheduling factors</li>
+            <li><strong>Data Preprocessing:</strong> Pandas for cleaning, normalization, and feature engineering</li>
+            <li><strong>GUI Interface:</strong> Tkinter-based interface for easy prediction input</li>
+            <li><strong>Model Evaluation:</strong> Provides accuracy, precision, recall, F1-scores, and confusion matrix</li>
+            <li><strong>Practical Application:</strong> Helps hospitals optimize schedules and reduce resource waste</li>
+            <li><strong>Insights:</strong> Identifies key factors influencing patient attendance</li>
+          </ul>
+        </div>
+
+        <div class="detail-section">
+          <h2>Machine Learning Model</h2>
+          <p><strong>Algorithm:</strong> Logistic Regression for binary classification</p>
+          <p><strong>Input Features:</strong> Patient age, gender, appointment scheduling type, medical conditions, previous no-show history, and appointment day of week</p>
+          <p><strong>Output:</strong> Probability of showing up (0-100%)</p>
+          <p><strong>Performance Metrics:</strong> The model achieves high accuracy in distinguishing between patients likely to show up and those likely to miss appointments</p>
+        </div>
+
+        <div class="detail-section">
+          <h2>Technologies Used</h2>
+          <div class="tech-details-grid">
+            <div class="tech-detail-card">
+              <h3>Python</h3>
+              <p>Core programming language for ML development</p>
+            </div>
+            <div class="tech-detail-card">
+              <h3>Scikit-learn</h3>
+              <p>ML library for Logistic Regression and model evaluation</p>
+            </div>
+            <div class="tech-detail-card">
+              <h3>Pandas</h3>
+              <p>Data manipulation and preprocessing</p>
+            </div>
+            <div class="tech-detail-card">
+              <h3>NumPy</h3>
+              <p>Numerical computations and array operations</p>
+            </div>
+            <div class="tech-detail-card">
+              <h3>Tkinter</h3>
+              <p>GUI framework for user interface</p>
+            </div>
+            <div class="tech-detail-card">
+              <h3>Matplotlib</h3>
+              <p>Data visualization for model analysis</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <h2>Real-World Impact</h2>
+          <p>Hospitals using this prediction model can:</p>
+          <ul class="features-list">
+            <li>Optimize appointment scheduling to reduce overbooking</li>
+            <li>Send targeted reminders to high-risk patients</li>
+            <li>Reduce waste of medical resources and staff time</li>
+            <li>Improve patient satisfaction through better scheduling</li>
+            <li>Increase revenue by reducing lost appointment slots</li>
+          </ul>
+        </div>
+
+        <div class="detail-section">
+          <h2>Project Links</h2>
+          <div class="project-links-detail">
+            <a href="https://github.com/lakshay290/Medical-Appointment-No-Show-Predictor" target="_blank" rel="noopener noreferrer" class="detail-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Designed &amp; Built by <span>Lakshay Bishnoi</span> &copy; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Appointment Scheduler (NLP) | Lakshay Bishnoi</title>
+  <meta name="description" content="An intelligent appointment scheduling system powered by Natural Language Processing." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">LB</a>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Project Details Section -->
+  <section class="project-detail-section">
+    <div class="project-detail-container">
+      <a href="projects.html" class="back-button">← Back to Projects</a>
+      
+      <div class="project-detail-header">
+        <div class="project-detail-icon">🗓️</div>
+        <h1 class="project-detail-title">Appointment Scheduler (NLP)</h1>
+        <p class="project-detail-subtitle">Intelligent scheduling powered by Natural Language Processing</p>
+      </div>
+
+      <div class="project-detail-content">
+        <div class="detail-section">
+          <h2>Overview</h2>
+          <p>An innovative appointment scheduling system that leverages Natural Language Processing to understand user intent and automatically extract appointment details from natural language commands. Instead of filling out complex forms, users can simply say "Book a doctor appointment next Monday at 6 PM" and the system handles the rest.</p>
+        </div>
+
+        <div class="detail-section">
+          <h2>Key Features</h2>
+          <ul class="features-list">
+            <li><strong>Natural Language Input:</strong> Accept appointment requests in conversational English</li>
+            <li><strong>Intent Recognition:</strong> Use spaCy NLP to understand user intent and extract relevant information</li>
+            <li><strong>Date/Time Extraction:</strong> Automatically parse dates and times from natural language using dateparser library</li>
+            <li><strong>Smart Slot Suggestion:</strong> Suggest available appointment slots based on existing bookings</li>
+            <li><strong>User-Friendly Interface:</strong> Tkinter GUI for intuitive desktop application experience</li>
+            <li><strong>Flexible Input Handling:</strong> Support various date formats and time references (e.g., "next Monday", "3 weeks from now")</li>
+            <li><strong>Error Handling:</strong> Gracefully handle ambiguous input with clarification prompts</li>
+            <li><strong>JSON Storage:</strong> Lightweight JSON-based storage for appointments</li>
+          </ul>
+        </div>
+
+        <div class="detail-section">
+          <h2>How It Works</h2>
+          <p><strong>Step 1:</strong> User enters appointment request in natural language</p>
+          <p><strong>Step 2:</strong> spaCy NLP engine analyzes the text to identify entities and intent</p>
+          <p><strong>Step 3:</strong> dateparser library extracts specific dates and times</p>
+          <p><strong>Step 4:</strong> System checks availability and suggests available slots</p>
+          <p><strong>Step 5:</strong> Appointment is confirmed and stored</p>
+        </div>
+
+        <div class="detail-section">
+          <h2>Technologies Used</h2>
+          <div class="tech-details-grid">
+            <div class="tech-detail-card">
+              <h3>Python</h3>
+              <p>Core programming language for the application</p>
+            </div>
+            <div class="tech-detail-card">
+              <h3>spaCy</h3>
+              <p>Industrial-strength NLP library for entity recognition</p>
+            </div>
+            <div class="tech-detail-card">
+              <h3>dateparser</h3>
+              <p>Intelligent date/time parsing from natural language</p>
+            </div>
+            <div class="tech-detail-card">
+              <h3>Tkinter</h3>
+              <p>Python GUI framework for desktop application</p>
+            </div>
+            <div class="tech-detail-card">
+              <h3>JSON</h3>
+              <p>Data storage format for appointments</p>
+            </div>
+            <div class="tech-detail-card">
+              <h3>Regular Expressions</h3>
+              <p>Pattern matching for additional text processing</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <h2>Example Usage</h2>
+          <p><strong>User Input:</strong> "I need to schedule a doctor appointment for next Monday at 6 PM"</p>
+          <p><strong>System Output:</strong> Suggests available slots on Monday afternoon and confirms 6 PM appointment</p>
+        </div>
+
+        <div class="detail-section">
+          <h2>Project Links</h2>
+          <div class="project-links-detail">
+            <a href="https://github.com/lakshay290/appointment-scheduler" target="_blank" rel="noopener noreferrer" class="detail-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Designed &amp; Built by <span>Lakshay Bishnoi</span> &copy; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

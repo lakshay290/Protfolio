@@ -1,7 +1,9 @@
 /* ===== Particle Background ===== */
 (function initParticles() {
   const canvas = document.getElementById('particles-canvas');
+  if (!canvas) return;
   const ctx = canvas.getContext('2d');
+  if (!ctx) return;
   let particles = [];
   const PARTICLE_COUNT = 80;
   const CONNECTION_DIST = 120;
@@ -78,26 +80,30 @@
 
 /* ===== Navbar Scroll Effect ===== */
 const navbar = document.querySelector('.navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 50);
-});
+if (navbar) {
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+}
 
 /* ===== Mobile Menu Toggle ===== */
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navLinks.classList.toggle('open');
-});
-
-// Close menu when a link is clicked
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navLinks.classList.remove('open');
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('open');
   });
-});
+
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+}
 
 /* ===== Scroll Reveal ===== */
 const revealElements = document.querySelectorAll('.reveal');
@@ -160,13 +166,22 @@ document.querySelectorAll('.projects-grid .project-card, .certs-grid .cert-card'
   card.style.transitionDelay = `${i * 0.1}s`;
 });
 
-/* ===== Smooth Scroll for anchor links (fallback) ===== */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
+/* ===== Read More Button Functionality ===== */
+const projectPages = [
+  'project-hms.html',
+  'project-lms.html',
+  'project-appointment-scheduler.html',
+  'project-medical-predictor.html',
+  'project-chatbot.html',
+  'project-process-monitor.html',
+  'project-event-reminder.html'
+];
+
+document.querySelectorAll('.read-more-btn').forEach((btn, index) => {
+  btn.addEventListener('click', (e) => {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (projectPages[index]) {
+      window.location.href = projectPages[index];
     }
   });
 });
